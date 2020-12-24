@@ -16,7 +16,9 @@ export default class WebpackConventionRoutingPlugin {
 
   constructor(options:WebpackConventionRoutingOptions) {}
 
-  apply(compiler: Compiler) {}
+  apply(compiler: Compiler) {
+  
+  }
 
 
 }
