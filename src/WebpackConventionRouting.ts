@@ -6,19 +6,25 @@ import glob from "glob";
 
 const DEFAULTS = {
   name: "webpack",
-  main: "src/views",
-  include: [],
-  exclude: ["**/components/**", "**/layouts/**", "**/utils/**"],
+  cwd: "./demo/src/views",
+  pattern: "**/*.vue",
 };
 
 export default class WebpackConventionRoutingPlugin {
   private options: any;
 
-  constructor(options:WebpackConventionRoutingOptions) {}
-
-  apply(compiler: Compiler) {
-  
+  constructor(options: WebpackConventionRoutingOptions) {
+    this.options = Object.assign({}, DEFAULTS, options);
   }
 
+  get cwd() {
+    return join(process.cwd(), this.options.cwd);
+  }
 
+  apply(compiler: Compiler) {
+    console.log(glob
+      .sync(this.options.pattern, {
+        cwd: this.cwd,
+      }))
+  }
 }

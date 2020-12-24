@@ -1,5 +1,5 @@
 const path = require('path')
-const WebpackVueRouterPlugin = require('jiti')(__dirname)('../src/WebpackVueRouter')
+const WebpackVueRouterPlugin = require('jiti')(__dirname)('../src/WebpackConventionRouting')
 
 
 module.exports = {

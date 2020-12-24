@@ -6,20 +6,15 @@ export interface WebpackConventionRoutingOptions {
   name?: string;
 
   /**
-   * 入口文件
+   * 要在其中搜索的当前工作目录。
    * @default 'src/view'
    */
-  main?: string;
+  cwd?: string;
 
   /**
    * 配置匹配规则
    * @default
    */
-  include?: string | Array<string>;
+  pattern?: string;
 
-  /**
-   * 配置忽略规则
-   * @default
-   */
-  exclude?: string | Array<string>;
 }
