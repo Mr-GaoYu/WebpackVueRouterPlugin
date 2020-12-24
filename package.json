@@ -1,5 +1,5 @@
 {
-  "name": "WebpackVueRouterPlugin",
+  "name": "WebpackConventionRoutingPlugin",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/Mr-GaoYu/WebpackVueRouterPlugin.git",
